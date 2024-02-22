@@ -6,18 +6,120 @@ html {
 }
 
 body { 
-  margin:0;
-  padding:0;
-	perspective: 1px;
-	transform-style: preserve-3d;
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: Nunito;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 h1 {
-   font-size: 250%
+	margin: 10;
+	font-size: 5.8rem;
+}
+
+figure {
+	margin: 0px;
+	background: rgba(lightBlue, 0.8);
+	box-shadow: -0.035rem 0.03rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+	--verticalPadding: 2rem;
+	--overlap: 6rem;
+	display: grid;
+	grid-template-columns: 6fr 6fr 2fr 3fr 3fr 3fr 3fr 5fr;
+	grid-template-rows: 
+		[header-start]
+		auto
+		[fig1-start]
+		3rem
+		[header-end]
+		minmax(var(--verticalPadding), auto)
+		[fig2-start]
+		var(--overlap) 
+		[fig1-end]
+		minmax(var(--verticalPadding), auto)
+		[fig3-start]
+		var(--overlap)
+		[fig2-end]
+		minmax(var(--verticalPadding), auto)
+		[fig3-end];
+
+    
+	grid-auto-rows: minmax(var(--verticalPadding), auto);
+	gap: 1rem;
+	max-width: 70rem;
+	margin: auto;
+	align-items: center;
+	
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+	}
+	
+	&::before {
+		grid-column: 3 / -3;
+		grid-row: 9 / span 4;
+		width: 100%;
+  	height: 500px;
+		position: relative;
+ 	 z-index: 2;
+	}
+}
+
+header {
+  margin-top: 100px;
+	grid-column: 5 / -2;
+	z-index: 1;
+	text-align: center;
+}
+
+.fig {
+	&--1 {
+		grid-column: span 5 / -1;
+		grid-row: fig1;
+	}
+	
+	&--2 {
+		grid-column: 1 / span 7;
+		grid-row: fig2;
+	}
+	
+	&--3 {
+		grid-column: span 5 / -2;
+		grid-row: fig3;
+		
+		img {
+			object-position: left;
+		}
+	}
+}
+
+[style*="--aspect-ratio"] {
+	position: relative;
+}
+
+[style*="--aspect-ratio"]::before {
+	content: "";
+	display: block;
+	padding-bottom: calc(100% / (var(--aspect-ratio)));
+}  
+
+[style*="--aspect-ratio"] > :first-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+} 
+
+
+h1 {
+   font-size: 300%
 }
 
 p {
@@ -27,16 +129,13 @@ p {
 }
 
 .slide {
-  position: relative;
-  padding: 25vh 10%;
-  min-height: 100vh;
+  min-height: 10vh;
   width: 100vw;
   box-sizing: border-box;
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
 	transform-style: inherit;
 }
 
-img {
+/* img {
   position: absolute;
   top: 50%;
   left: 35%;
@@ -47,71 +146,38 @@ img {
   border-radius: 5px;
   background: rgba(240,230,220, .7);
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-}
+}  */
 
 
-.title {
+/* .title {
   width: 50%;
   padding: 5%;
   border-radius: 5px;
   background: rgba(240,230,220, .7);
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-}
+} */
 
-.slide:nth-child(2n) .title {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.slide:nth-child(2n+1) .title {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.slide, .slide:before {
-  background: 50% 50% / cover;  
-}
-
-.header {
-  text-align: center;
-  font-size: 175%;
-  color: #fff;
-  text-shadow: 0 2px 2px #000;
-}
 
 #title {
   background-image: url("assets/agu.jpg");
   z-index:2;
 }
 
-#title h1 {
- transform: translateZ(.25px) scale(.75);
- transform-origin: 50% 100%;
- text-align: center;
-}
-
-#slide1_header h1 {
-  transform: translateZ(.25px) scale(.75);
-  transform-origin: 50% 100%;
-  text-align: center;
-  font-size: 175%;
- }
-
 #slide1 {
   background-color:#8FC0A9;
   transform: translateZ(-1px) scale(1);
 }
 
-#slide2 {
+/* #slide2 {
   background-image: url("https://picsum.photos/960/400");
   z-index:2;
 }
 
-#slide3:before {
+#slide3{
   background-image: url("https://picsum.photos/980/600");
-  transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(1);
 }
 
 #slide4 {
   background: #222;
-}
+}  */
