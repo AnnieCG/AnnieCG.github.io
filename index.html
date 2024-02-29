@@ -6,17 +6,38 @@
 
   </head>
 
+
   <body>
     <script type="text/javascript" src="index.js"></script>
+  </body>
+
+  <section class="et-hero-tabs">
     <div>
       <img src="assets/agu.jpg" class="header">
     <div>
+      
+    <div class="et-hero-tabs-container">
+      <a class="et-hero-tab" href="#tab-intro">Introduction</a>
+      <a class="et-hero-tab" href="#slide1">AGU Trip</a>
+      <a class="et-hero-tab" href="#slide3">Research</a>
+      <a class="et-hero-tab" href="#slide4">Poster</a>
+      <a class="et-hero-tab" href="#tab-end">End</a>
+      <span class="et-hero-tab-slider"></span>
+    </div>
+  </section>
 
-    <div id="slide1">
+  <main class="et-main">
+    <section class="et-slide" id="tab-intro">
+      <h1>Introduction</h1>
+      <h3>something about es6</h3>
+    </section>
+
+    <section class="et-slide" id="slide1">
       <div class="grid">
         <header>
           <h1>AGU Trip</h1>
         </header>
+
         <figure class="fig fig--1" style="--aspect-ratio: 3/4;">
           <img src='assets/breal.jpg'>
         </figure>
@@ -26,15 +47,12 @@
         <figure class="fig fig--3" style="--aspect-ratio: 3/4;">
           <img src='assets/chinatown.jpg'>
       </div>
+    </section>
 
-    
-    <div id="slide2" class="slide">
-      <div class="title">
-        <h1>Research</h1>
-    </div>
 
-    <div id="slide3" class="slide">
-
+    <section class="et-slide" id="slide3">
+      <h1>Research</h1>
+      <h3>something about react</h3>
       <div id="carousel" data-auto="true">
         <div id="scene">
           <img class="carousel_item" src="assets/1.JPG" >
@@ -53,18 +71,24 @@
           <div class="btn next">Next</div>
         </div>
       </div>
-  </div>
+    </section>
 
 
-    
-    <!-- <div id="slide4" class="slide header">
-        <h1>The End</h1>
-    </div> -->
+    <section class="et-slide" id="slide4">
+      <h1>Poster</h1>
+      <h3>something about angular</h3>
+      <div>
+        <img src="assets/poster.png" class="poster">
+      <div>
 
-  </body>
-</html>  -->
+    </section>
+    <section class="et-slide" id="tab-end">
+      <h1>End</h1>
+      <h3>something about other</h3>
+    </section>
+  </main>
 
 
 
 
-
+  </html>
