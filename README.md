@@ -1,11 +1,27 @@
 # emmaqbrown.github.io
 
-My personal site.
+AGU site.
 
 ---
 
 ## Works Cited
 
-> Use this section to  keep track of the resources you reference. You must include a link with a short description of how you used it. 
+> https://codepen.io/Ning-Hoi-Annabel-CHEUNG/pen/LYaojER 
+> slide classes
 
-- [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - center content and create structure to the site
+>https://codepen.io/iansvo/pen/xxZEVqp 
+>overlapping image in "confrence" section
+
+>https://codepen.io/Ning-Hoi-Annabel-CHEUNG/pen/XWGwPdW
+> image layout in "confrence" section
+
+>https://codepen.io/Ning-Hoi-Annabel-CHEUNG/pen/KKYKdzp
+> whole page layout, scrolling slides, plus navigation bar
+
+>https://codepen.io/isladjan/pen/OdpXyr
+> rotating image gallery in "research" section
+
+
+
+
+>[flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - center content and create structure to the site

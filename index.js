@@ -60,7 +60,11 @@ function carouselRUN() {
             }
         }, true);
     }
-}class StickyNavigation {
+}
+
+
+class StickyNavigation {
+	
 	
 	constructor() {
 		this.currentId = null;
@@ -135,3 +139,6 @@ function carouselRUN() {
 }
 
 new StickyNavigation();
+
+
+

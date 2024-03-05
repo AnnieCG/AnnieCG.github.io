@@ -9,7 +9,18 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: Nunito;
+  font-family: 'Droid Serif';
+}
+
+.intro {
+	font-size: 2rem;
+}
+
+p {
+	width:50rem;
+	font-family: 'Droid Serif';
+	font-size: 1.0em;
+	line-height: 1.5em;
 }
 
 a {
@@ -104,7 +115,7 @@ h3 {
 }
 #carousel #scene {
 	width: 42%;
-	margin: 40px auto 0 auto;
+	margin: 60px auto 0 auto;
 	transform-style: preserve-3d;
 	transition: transform 0.5s;
 }
@@ -156,11 +167,10 @@ h3 {
 figure {
 	margin: 0px;
 	background: rgba(lightBlue, 0.8);
-	box-shadow: -0.035rem 0.03rem 0.3rem rgba(0, 0, 0, 0.2);
 }
 
 .grid {
-	--overlap: 6rem;
+	--overlap: 1rem;
 	display: grid;
 	grid-template-columns: 6fr 6fr 2fr 3fr 3fr 3fr 3fr 5fr;
 	grid-template-rows: 
@@ -182,7 +192,7 @@ figure {
 	grid-auto-rows: minmax(var(--verticalPadding), auto);
 	gap: 1rem;
 	max-width: 70rem;
-	margin: auto;
+	margin-top: 70px;
 	margin-right: 200px;
 	align-items: center;
 	
@@ -203,7 +213,8 @@ figure {
 }
 
 header {
-  margin-top: 100px;
+	margin-top: 150px;
+	margin-right: 40px;
 	grid-column: 5 / -2;
 	z-index: 1;
 	text-align: center;
@@ -252,6 +263,10 @@ h1 {
    font-size: 300%
 }
 
+h2 {
+	font-size: 400%
+ }
+
 p {
   font-size: 140%;
   line-height: 150%;
@@ -270,10 +285,9 @@ p {
 }
 
 .poster{
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height: 20%;
+	height: 50rem;
 }
 
 figure img {
@@ -284,26 +298,51 @@ figure img {
   margin-top: 30px;
   border-radius: 5px;
   background: rgba(240,230,220, .7);
+  
 } 
+
+#tab-intro {
+	height: 30rem;
+}
 
 #slide1 {
 	align-self: center;
-	background-color: rgb(83, 131, 189);
-	/* background-size: contain;
-	background-repeat: no-repeat;  */
+	background-color: rgb(149, 173, 204);
 	width: 100%;
+	height: 45rem;
 }
 
 #slide2 {
-	background-color: rgb(83, 131, 189);
-	z-index:2;
-}
-
-#slide3{
 	height: 950px;
 	transform: translateZ(-1px) scale(1);
 }
 
-#slide4 {
-	margin-top: 90rem;
-} 
+#slide3{
+	height: 80rem;
+	/* margin-top: 90rem; */
+	margin-bottom:10px;
+}
+
+#tab-end{
+	height: 10rem;
+}
+
+
+#link {
+	font-family: Termina, sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	-webkit-text-stroke: 2px rgb(100, 128, 229);
+	text-stroke: 2px rgb(124, 153, 210);
+	color: transparent;
+	font-size: clamp(3rem, 10vw, 6rem);
+	position: absolute;
+	margin-bottom: 80px;
+	left: 5%;
+	width: 90%;
+	height: 50%;
+	z-index: 99;
+	display: grid;
+	align-self: center;
+}
+  
